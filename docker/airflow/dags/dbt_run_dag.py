@@ -13,5 +13,10 @@ with DAG(
     # The paths map to where the volume is literally mapped inside the Docker container
     run_dbt_model = BashOperator(
         task_id='run_dbt_models',
-        bash_command='dbt run --project-dir /opt/airflow/dbt_project --profiles-dir /opt/airflow/dbt_project'
+        bash_command='''
+        python3 -m venv /tmp/dbt_venv
+        source /tmp/dbt_venv/bin/activate
+        pip install dbt-core dbt-postgres
+        dbt run --project-dir /opt/airflow/dbt_project --profiles-dir /opt/airflow/dbt_project
+        '''
     )

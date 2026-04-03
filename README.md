@@ -14,6 +14,7 @@ This repository includes projects and exercises utilizing the following technolo
 *   **Big Data Processing:** Apache Spark
 *   **Workflow Orchestration:** Apache Airflow
 *   **Databases & Data Warehousing:** SQL, Snowflake
+*   **Data Transformation:** dbt (Data Build Tool)
 *   *(More technologies will be added as the repository grows)*
 
 ## 📂 Structure
@@ -21,6 +22,8 @@ This repository includes projects and exercises utilizing the following technolo
 *(Directory structure will be updated as new projects are added. Examples include:)*
 
 *   `/docker` - Dockerfiles and Compose files for local environments.
+    *   `/docker/airflow` - Airflow local cluster setup.
+    *   `/docker/airflow/dbt_project` - dbt models mounted natively into Airflow operators.
 *   `/spark` - Data processing and transformation scripts.
 *   `/airflow` - Directed Acyclic Graphs (DAGs) for scheduling and orchestration.
 *   `/sql` - Advanced querying, schema design, and DDL/DML scripts.

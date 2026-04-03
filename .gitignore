@@ -36,6 +36,7 @@ wheels/
 
 # Airflow Specific
 docker/airflow/logs/
+docker/airflow/postgres-db-volume/
 logs/
 airflow.cfg
 airflow.db
@@ -56,3 +57,9 @@ docker-compose.override.yml
 *.swp
 .DS_Store
 Thumbs.db
+
+# dbt specific
+target/
+dbt_packages/
+logs/
+dbt.log
